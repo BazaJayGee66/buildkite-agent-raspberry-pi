@@ -18,6 +18,7 @@ RUN apk add --no-cache \
       run-parts \
       tini \
       tzdata \
+    && \
     pip3 install --upgrade pip
 
 WORKDIR /buildkite
