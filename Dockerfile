@@ -13,6 +13,7 @@ RUN apk add --no-cache \
       jq \
       su-exec \
       python3 \
+      py3-pip \
       libc6-compat \
       run-parts \
       tini \
