@@ -1,6 +1,7 @@
-FROM alpine:3.8
+FROM alpine:3.12
 
 RUN apk add --no-cache \
+      ansible \
       bash \
       git \
       perl \
@@ -8,6 +9,7 @@ RUN apk add --no-cache \
       openssh-client \
       curl \
       docker \
+      docker-compose \
       jq \
       su-exec \
       python3 \
@@ -15,9 +17,7 @@ RUN apk add --no-cache \
       run-parts \
       tini \
       tzdata \
-    && \
-    pip3 install --upgrade pip && \
-    pip3 install --quiet docker-compose~=1.23.0
+    pip3 install --upgrade pip
 
 WORKDIR /buildkite
 
