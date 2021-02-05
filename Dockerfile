@@ -18,6 +18,7 @@ RUN apk add --no-cache \
       run-parts \
       tini \
       tzdata \
+      zip \
     && \
     wget https://github.com/cli/cli/releases/download/v1.5.0/gh_1.5.0_linux_armv6.tar.gz && \
     tar -xzvf gh_1.5.0_linux_armv6.tar.gz && \
