@@ -19,6 +19,10 @@ RUN apk add --no-cache \
       tini \
       tzdata \
     && \
+    wget https://github.com/cli/cli/releases/download/v1.5.0/gh_1.5.0_linux_armv6.tar.gz && \
+    tar -xzvf gh_1.5.0_linux_armv6.tar.gz && \
+    mv gh_1.5.0_linux_armv6/bin/gh /usr/bin/gh && \
+    rm -rf gh_1.5.0_linux_armv6.tar.gz gh_1.5.0_linux_armv6 && \
     pip3 install --upgrade pip
 
 WORKDIR /buildkite
