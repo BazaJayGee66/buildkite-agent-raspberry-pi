@@ -28,7 +28,7 @@ RUN apk add --no-cache \
 
 WORKDIR /buildkite
 
-ARG BK_VERSION=3.23.1
+ARG BK_VERSION=3.29.0
 ENV BUILDKITE_AGENT_CONFIG=/buildkite/buildkite-agent.cfg
 
 RUN wget https://github.com/buildkite/agent/releases/download/v${BK_VERSION}/buildkite-agent-linux-armhf-${BK_VERSION}.tar.gz \
